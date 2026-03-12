@@ -14,9 +14,11 @@ def is_valid(board, row, col):
     """
     # 检查同列
     for r in range(row):
-        if board[r] == col:
+        if board[r] == col or abs(r - row) ==
+abs(board[r] - col):
             return False
-    # 检查对角线
+return True
+    # 故意注释掉对角线检查，制造对角Bug
     for r in range(row):
         if abs(r - row) == abs(board[r] - col):
             return False
